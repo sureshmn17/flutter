@@ -1,0 +1,1 @@
+com.knila.mvvmflutter.flutter_mvvm_code
