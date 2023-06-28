@@ -5,6 +5,9 @@ import 'package:flutter_mvvm_code/presentation/resources/assets_manager.dart';
 import 'package:flutter_mvvm_code/presentation/resources/color_manager.dart';
 import 'package:flutter_mvvm_code/presentation/resources/routes_manager.dart';
 
+import '../../app/app_prefs.dart';
+import '../../app/di.dart';
+
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
 
@@ -14,6 +17,7 @@ class SplashView extends StatefulWidget {
 
 class _SplashViewState extends State<SplashView> {
 
+  final AppPreferences _appPreferences = instance<AppPreferences>();
   Timer? _timer;
 
   _startDelay(){
@@ -21,7 +25,24 @@ class _SplashViewState extends State<SplashView> {
   }
 
   _goNext(){
-    Navigator.pushReplacementNamed(context,Routes.loginRoute);
+
+    _appPreferences.isUserLoggedIn().then((isUserLoggedIn) => {
+
+    if(isUserLoggedIn){
+      // navigate to main screen
+      Navigator.pushReplacementNamed(context,Routes.dashboard)
+    }else{
+      _appPreferences.isOnDashboardScreenViewed().then((isOnDashboardScreenViewed) =>
+      {
+        if(isOnDashboardScreenViewed){
+          Navigator.pushReplacementNamed(context,Routes.loginRoute)
+        }else{
+          Navigator.pushReplacementNamed(context,Routes.dashboard)
+        }
+
+      })
+    }
+  });
   }
   @override
   void initState() {

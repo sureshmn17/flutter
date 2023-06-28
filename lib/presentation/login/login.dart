@@ -13,6 +13,7 @@ import 'package:flutter_mvvm_code/presentation/resources/color_manager.dart';
 import 'package:flutter_mvvm_code/presentation/resources/strings_manager.dart';
 import 'package:flutter_mvvm_code/presentation/resources/styles_manager.dart';
 
+import '../../app/app_prefs.dart';
 import '../resources/routes_manager.dart';
 import '../resources/values_manager.dart';
 import 'componets/login_top.dart';
@@ -31,6 +32,7 @@ class _LoginViewState extends State<LoginView> {
 
   final TextEditingController _userNameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final AppPreferences  _appPreferences = instance<AppPreferences>() ;
   final _formKey = GlobalKey<FormState>();
 
   bool passwordVisible = false;
@@ -42,6 +44,7 @@ class _LoginViewState extends State<LoginView> {
        //navigate to main screen
 
        SchedulerBinding.instance.addPostFrameCallback((_) {
+         _appPreferences.setIsUserLoggedIn();
          Navigator.of(context).pushReplacementNamed(Routes.mainRoute);
        });
      });
