@@ -1,4 +1,4 @@
-#Tue Jun 20 19:14:02 IST 2023
-base.0=/Users/arul/StudioProjects/Arul_flutter_backup/flutter_mvvm_code/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+#Wed Jun 28 10:09:16 IST 2023
+base.0=/Users/arul/StudioProjects/flutter_mvvm_git/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

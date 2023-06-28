@@ -1,8 +1,34 @@
 <libraries>
   <library
-      name="__local_aars__:/Users/arul/StudioProjects/Arul_flutter_backup/flutter_mvvm_code/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
-      jars="/Users/arul/StudioProjects/Arul_flutter_backup/flutter_mvvm_code/build/app/intermediates/flutter/release/libs.jar"
-      resolved="__local_aars__:/Users/arul/StudioProjects/Arul_flutter_backup/flutter_mvvm_code/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+      name="__local_aars__:/Users/arul/StudioProjects/flutter_mvvm_git/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
+      jars="/Users/arul/StudioProjects/flutter_mvvm_git/build/app/intermediates/flutter/release/libs.jar"
+      resolved="__local_aars__:/Users/arul/StudioProjects/flutter_mvvm_git/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+  <library
+      name="/Users/arul/StudioProjects/flutter_mvvm_git/android@@:shared_preferences_android::release"
+      jars="/Users/arul/StudioProjects/flutter_mvvm_git/build/shared_preferences_android/.transforms/ea5ff6614493447d97392926d573651a/transformed/out/jars/classes.jar:/Users/arul/StudioProjects/flutter_mvvm_git/build/shared_preferences_android/.transforms/ea5ff6614493447d97392926d573651a/transformed/out/jars/libs/R.jar"
+      resolved="io.flutter.plugins.sharedpreferences:shared_preferences_android:unspecified"
+      folder="/Users/arul/StudioProjects/flutter_mvvm_git/build/shared_preferences_android/.transforms/ea5ff6614493447d97392926d573651a/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="/Users/arul/StudioProjects/flutter_mvvm_git/android@@:device_info_plus::release"
+      jars="/Users/arul/StudioProjects/flutter_mvvm_git/build/device_info_plus/.transforms/beb47f4acbc044e3ccad0034aa0037f8/transformed/out/jars/classes.jar:/Users/arul/StudioProjects/flutter_mvvm_git/build/device_info_plus/.transforms/beb47f4acbc044e3ccad0034aa0037f8/transformed/out/jars/libs/R.jar"
+      resolved="dev.fluttercommunity.plus.device_info:device_info_plus:unspecified"
+      folder="/Users/arul/StudioProjects/flutter_mvvm_git/build/device_info_plus/.transforms/beb47f4acbc044e3ccad0034aa0037f8/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
   <library
       name="io.flutter:flutter_embedding_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084@jar"
       jars="/Users/arul/.gradle/caches/modules-2/files-2.1/io.flutter/flutter_embedding_release/1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084/9cba41c99092591788ce04ddd2ca65cc86ce15b8/flutter_embedding_release-1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084.jar"
@@ -61,18 +87,6 @@
       name="io.flutter:x86_64_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084@jar"
       jars="/Users/arul/.gradle/caches/modules-2/files-2.1/io.flutter/x86_64_release/1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084/56b44a0d2b9cd8b9e5c2446fe601b2c66f31098c/x86_64_release-1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084.jar"
       resolved="io.flutter:x86_64_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
-      jars="/Users/arul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.7.10/d2abf9e77736acc4450dc4a3f707fa2c10f5099d/kotlin-stdlib-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.10"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar"
-      jars="/Users/arul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.7.10/bac80c520d0a9e3f3673bc2658c6ed02ef45a76a/kotlin-stdlib-common-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10"/>
-  <library
-      name="org.jetbrains:annotations:13.0@jar"
-      jars="/Users/arul/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
-      resolved="org.jetbrains:annotations:13.0"/>
   <library
       name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
       jars="/Users/arul/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.2.0/cd3478503da69b1a7e0319bd2d1389943db9b364/lifecycle-common-java8-2.2.0.jar"
@@ -288,4 +302,16 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.22@jar"
+      jars="/Users/arul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.7.22/9fb43bccb6cf8cfaaf3776c75f5df4f052f09b72/kotlin-stdlib-1.7.22.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.22"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.22@jar"
+      jars="/Users/arul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.7.22/5dd2c9dcf64c94b46cf4bdb6fa4035b9bb726e2e/kotlin-stdlib-common-1.7.22.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.22"/>
+  <library
+      name="org.jetbrains:annotations:13.0@jar"
+      jars="/Users/arul/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+      resolved="org.jetbrains:annotations:13.0"/>
 </libraries>

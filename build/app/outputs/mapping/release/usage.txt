@@ -1653,6 +1653,18 @@ com.knila.mvvmflutter.flutter_mvvm_code.R$string
 com.knila.mvvmflutter.flutter_mvvm_code.R$style
 com.knila.mvvmflutter.flutter_mvvm_code.R$styleable
 com.knila.mvvmflutter.flutter_mvvm_code.R
+dev.fluttercommunity.plus.device_info.BuildConfig
+dev.fluttercommunity.plus.device_info.R$attr
+dev.fluttercommunity.plus.device_info.R$color
+dev.fluttercommunity.plus.device_info.R$dimen
+dev.fluttercommunity.plus.device_info.R$drawable
+dev.fluttercommunity.plus.device_info.R$id
+dev.fluttercommunity.plus.device_info.R$integer
+dev.fluttercommunity.plus.device_info.R$layout
+dev.fluttercommunity.plus.device_info.R$string
+dev.fluttercommunity.plus.device_info.R$style
+dev.fluttercommunity.plus.device_info.R$styleable
+dev.fluttercommunity.plus.device_info.R
 io.flutter.BuildConfig
 io.flutter.FlutterInjector$Builder:
     public io.flutter.FlutterInjector$Builder setDeferredComponentManager(io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager)
@@ -1787,7 +1799,6 @@ io.flutter.embedding.engine.FlutterEngine:
     public io.flutter.embedding.engine.plugins.contentprovider.ContentProviderControlSurface getContentProviderControlSurface()
     public io.flutter.embedding.engine.systemchannels.DeferredComponentChannel getDeferredComponentChannel()
     public io.flutter.embedding.engine.systemchannels.LocalizationChannel getLocalizationChannel()
-    public io.flutter.embedding.engine.plugins.PluginRegistry getPlugins()
     public io.flutter.embedding.engine.plugins.service.ServiceControlSurface getServiceControlSurface()
     public void removeEngineLifecycleListener(io.flutter.embedding.engine.FlutterEngine$EngineLifecycleListener)
 io.flutter.embedding.engine.FlutterEngineCache:
@@ -1811,8 +1822,14 @@ io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineActivit
     public void removeOnSaveStateListener(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding$OnSaveInstanceStateListener)
     public void removeOnUserLeaveHintListener(io.flutter.plugin.common.PluginRegistry$UserLeaveHintListener)
     public void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener)
-io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineBroadcastReceiverPluginBinding
-io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineContentProviderPluginBinding
+io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineBroadcastReceiverPluginBinding:
+    private final android.content.BroadcastReceiver broadcastReceiver
+    void <init>(android.content.BroadcastReceiver)
+    public android.content.BroadcastReceiver getBroadcastReceiver()
+io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineContentProviderPluginBinding:
+    private final android.content.ContentProvider contentProvider
+    void <init>(android.content.ContentProvider)
+    public android.content.ContentProvider getContentProvider()
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineServicePluginBinding:
     private final io.flutter.embedding.engine.plugins.lifecycle.HiddenLifecycleReference hiddenLifecycleReference
     private final java.util.Set onModeChangeListeners
@@ -1826,16 +1843,12 @@ io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineService
     public void removeOnModeChangeListener(io.flutter.embedding.engine.plugins.service.ServiceAware$OnModeChangeListener)
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry:
     private static final java.lang.String TAG
-    private io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineBroadcastReceiverPluginBinding broadcastReceiverPluginBinding
-    private io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineContentProviderPluginBinding contentProviderPluginBinding
-    public void add(io.flutter.embedding.engine.plugins.FlutterPlugin)
     public void add(java.util.Set)
     public void attachToBroadcastReceiver(android.content.BroadcastReceiver,androidx.lifecycle.Lifecycle)
     public void attachToContentProvider(android.content.ContentProvider,androidx.lifecycle.Lifecycle)
     public void attachToService(android.app.Service,androidx.lifecycle.Lifecycle,boolean)
     private android.app.Activity attachedActivity()
     public io.flutter.embedding.engine.plugins.FlutterPlugin get(java.lang.Class)
-    public boolean has(java.lang.Class)
     public void onMoveToBackground()
     public void onMoveToForeground()
 io.flutter.embedding.engine.FlutterEngineGroup$Options:
@@ -1900,7 +1913,6 @@ io.flutter.embedding.engine.dart.DartExecutor$DartCallback
 io.flutter.embedding.engine.dart.DartExecutor$DefaultBinaryMessenger:
     public void disableBufferingIncomingMessages()
     public void enableBufferingIncomingMessages()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public void send(java.lang.String,java.nio.ByteBuffer)
 io.flutter.embedding.engine.dart.DartExecutor:
     private static final java.lang.String TAG
@@ -1910,23 +1922,13 @@ io.flutter.embedding.engine.dart.DartExecutor:
     public void executeDartEntrypoint(io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint)
     public io.flutter.plugin.common.BinaryMessenger getBinaryMessenger()
     public int getPendingChannelResponseCount()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public void send(java.lang.String,java.nio.ByteBuffer)
     public void setIsolateServiceIdListener(io.flutter.embedding.engine.dart.DartExecutor$IsolateServiceIdListener)
-io.flutter.embedding.engine.dart.DartMessenger$1
-io.flutter.embedding.engine.dart.DartMessenger$ConcurrentTaskQueue
-io.flutter.embedding.engine.dart.DartMessenger$DefaultTaskQueueFactory:
-    public io.flutter.embedding.engine.dart.DartMessenger$DartMessengerTaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
-io.flutter.embedding.engine.dart.DartMessenger$SerialTaskQueue
-io.flutter.embedding.engine.dart.DartMessenger$TaskQueueFactory:
-    public abstract io.flutter.embedding.engine.dart.DartMessenger$DartMessengerTaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
-io.flutter.embedding.engine.dart.DartMessenger$TaskQueueToken
 io.flutter.embedding.engine.dart.DartMessenger:
     private static final java.lang.String TAG
     public void disableBufferingIncomingMessages()
     public void enableBufferingIncomingMessages()
     public int getPendingChannelResponseCount()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public void send(java.lang.String,java.nio.ByteBuffer)
 io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager:
     public abstract void loadAssets(int,java.lang.String)
@@ -2007,16 +2009,18 @@ io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets:
     public abstract java.lang.String getAssetFilePathBySubpath(java.lang.String)
     public abstract java.lang.String getAssetFilePathBySubpath(java.lang.String,java.lang.String)
 io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding:
-    public android.content.Context getApplicationContext()
-    public io.flutter.plugin.common.BinaryMessenger getBinaryMessenger()
     public io.flutter.embedding.engine.FlutterEngineGroup getEngineGroup()
     public io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets getFlutterAssets()
     public io.flutter.embedding.engine.FlutterEngine getFlutterEngine()
     public io.flutter.plugin.platform.PlatformViewRegistry getPlatformViewRegistry()
     public io.flutter.view.TextureRegistry getTextureRegistry()
-io.flutter.embedding.engine.plugins.FlutterPlugin:
-    public abstract void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding)
-io.flutter.embedding.engine.plugins.PluginRegistry
+io.flutter.embedding.engine.plugins.PluginRegistry:
+    public abstract void add(java.util.Set)
+    public abstract io.flutter.embedding.engine.plugins.FlutterPlugin get(java.lang.Class)
+    public abstract boolean has(java.lang.Class)
+    public abstract void remove(java.lang.Class)
+    public abstract void remove(java.util.Set)
+    public abstract void removeAll()
 io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding:
     public abstract void addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener)
     public abstract void addOnNewIntentListener(io.flutter.plugin.common.PluginRegistry$NewIntentListener)
@@ -2030,19 +2034,19 @@ io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding:
     public abstract void removeOnSaveStateListener(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding$OnSaveInstanceStateListener)
     public abstract void removeOnUserLeaveHintListener(io.flutter.plugin.common.PluginRegistry$UserLeaveHintListener)
     public abstract void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener)
-io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverAware:
-    public abstract void onAttachedToBroadcastReceiver(io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverPluginBinding)
 io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverControlSurface
-io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverPluginBinding
-io.flutter.embedding.engine.plugins.contentprovider.ContentProviderAware:
-    public abstract void onAttachedToContentProvider(io.flutter.embedding.engine.plugins.contentprovider.ContentProviderPluginBinding)
+io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverPluginBinding:
+    public abstract android.content.BroadcastReceiver getBroadcastReceiver()
 io.flutter.embedding.engine.plugins.contentprovider.ContentProviderControlSurface
-io.flutter.embedding.engine.plugins.contentprovider.ContentProviderPluginBinding
+io.flutter.embedding.engine.plugins.contentprovider.ContentProviderPluginBinding:
+    public abstract android.content.ContentProvider getContentProvider()
 io.flutter.embedding.engine.plugins.service.ServiceAware$OnModeChangeListener
-io.flutter.embedding.engine.plugins.service.ServiceAware:
-    public abstract void onAttachedToService(io.flutter.embedding.engine.plugins.service.ServicePluginBinding)
 io.flutter.embedding.engine.plugins.service.ServiceControlSurface
-io.flutter.embedding.engine.plugins.service.ServicePluginBinding
+io.flutter.embedding.engine.plugins.service.ServicePluginBinding:
+    public abstract void addOnModeChangeListener(io.flutter.embedding.engine.plugins.service.ServiceAware$OnModeChangeListener)
+    public abstract java.lang.Object getLifecycle()
+    public abstract android.app.Service getService()
+    public abstract void removeOnModeChangeListener(io.flutter.embedding.engine.plugins.service.ServiceAware$OnModeChangeListener)
 io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry$1
 io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry$ShimRegistrarAggregate
 io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry
@@ -2115,14 +2119,11 @@ io.flutter.plugin.common.BasicMessageChannel:
     public void resizeChannelBuffer(int)
     static void resizeChannelBuffer(io.flutter.plugin.common.BinaryMessenger,java.lang.String,int)
 io.flutter.plugin.common.BinaryCodec
-io.flutter.plugin.common.BinaryMessenger$-CC:
-    public static io.flutter.plugin.common.BinaryMessenger$TaskQueue $default$makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger)
-io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions
+io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions:
+    public io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions setIsSerial(boolean)
 io.flutter.plugin.common.BinaryMessenger:
     public void disableBufferingIncomingMessages()
     public void enableBufferingIncomingMessages()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public abstract void send(java.lang.String,java.nio.ByteBuffer)
 io.flutter.plugin.common.ErrorLogResult
 io.flutter.plugin.common.EventChannel$1
@@ -2141,7 +2142,6 @@ io.flutter.plugin.common.MethodCall:
     public boolean hasArgument(java.lang.String)
 io.flutter.plugin.common.MethodChannel:
     private static final java.lang.String TAG
-    public void <init>(io.flutter.plugin.common.BinaryMessenger,java.lang.String)
     public void resizeChannelBuffer(int)
 io.flutter.plugin.common.PluginRegistry$PluginRegistrantCallback
 io.flutter.plugin.common.PluginRegistry$Registrar
@@ -2221,6 +2221,29 @@ io.flutter.plugin.platform.SingleViewPresentation$WindowManagerHandler:
 io.flutter.plugin.platform.VirtualDisplayController:
     public void dispose()
     void onFlutterViewDetached()
+io.flutter.plugins.sharedpreferences.BuildConfig
+io.flutter.plugins.sharedpreferences.Messages$FlutterError:
+    public void <init>(java.lang.String,java.lang.String,java.lang.Object)
+io.flutter.plugins.sharedpreferences.Messages:
+    public void <init>()
+io.flutter.plugins.sharedpreferences.R$attr
+io.flutter.plugins.sharedpreferences.R$color
+io.flutter.plugins.sharedpreferences.R$dimen
+io.flutter.plugins.sharedpreferences.R$drawable
+io.flutter.plugins.sharedpreferences.R$id
+io.flutter.plugins.sharedpreferences.R$integer
+io.flutter.plugins.sharedpreferences.R$layout
+io.flutter.plugins.sharedpreferences.R$string
+io.flutter.plugins.sharedpreferences.R$style
+io.flutter.plugins.sharedpreferences.R$styleable
+io.flutter.plugins.sharedpreferences.R
+io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin:
+    private static final java.lang.String BIG_INTEGER_PREFIX
+    private static final java.lang.String DOUBLE_PREFIX
+    private static final java.lang.String LIST_IDENTIFIER
+    private static final java.lang.String SHARED_PREFERENCES_NAME
+    private static final java.lang.String TAG
+    public static void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar)
 io.flutter.util.HandlerCompat:
     public void <init>()
 io.flutter.util.PathUtils:
@@ -5805,11 +5828,15 @@ kotlin.ranges.ClosedFloatingPointRange$DefaultImpls
 kotlin.ranges.ClosedFloatingPointRange
 kotlin.ranges.ClosedRange$DefaultImpls
 kotlin.ranges.ClosedRange
+kotlin.ranges.ComparableOpenEndRange
 kotlin.ranges.ComparableRange
 kotlin.ranges.IntProgressionIterator:
     public final int getStep()
 kotlin.ranges.IntRange:
     public synthetic bridge boolean contains(java.lang.Comparable)
+    public synthetic bridge java.lang.Comparable getEndExclusive()
+    public java.lang.Integer getEndExclusive()
+    public static synthetic void getEndExclusive$annotations()
     public synthetic bridge java.lang.Comparable getEndInclusive()
     public synthetic bridge java.lang.Comparable getStart()
 kotlin.ranges.LongProgression$Companion
@@ -5817,15 +5844,23 @@ kotlin.ranges.LongProgression
 kotlin.ranges.LongProgressionIterator
 kotlin.ranges.LongRange$Companion
 kotlin.ranges.LongRange
+kotlin.ranges.OpenEndDoubleRange
+kotlin.ranges.OpenEndFloatRange
+kotlin.ranges.OpenEndRange$DefaultImpls
+kotlin.ranges.OpenEndRange
 kotlin.ranges.RangesKt:
     private void <init>()
 kotlin.ranges.RangesKt__RangesKt:
     public void <init>()
     public static final void checkStepIsPositive(boolean,java.lang.Number)
-    private static final boolean contains(java.lang.Iterable,java.lang.Object)
+    private static final boolean contains(kotlin.ranges.ClosedRange,java.lang.Object)
+    private static final boolean contains(kotlin.ranges.OpenEndRange,java.lang.Object)
     public static final kotlin.ranges.ClosedFloatingPointRange rangeTo(double,double)
     public static final kotlin.ranges.ClosedFloatingPointRange rangeTo(float,float)
     public static final kotlin.ranges.ClosedRange rangeTo(java.lang.Comparable,java.lang.Comparable)
+    public static final kotlin.ranges.OpenEndRange rangeUntil(double,double)
+    public static final kotlin.ranges.OpenEndRange rangeUntil(float,float)
+    public static final kotlin.ranges.OpenEndRange rangeUntil(java.lang.Comparable,java.lang.Comparable)
 kotlin.ranges.RangesKt___RangesKt:
     public void <init>()
     public static final synthetic boolean byteRangeContains(kotlin.ranges.ClosedRange,double)
@@ -5833,6 +5868,9 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final boolean byteRangeContains(kotlin.ranges.ClosedRange,int)
     public static final boolean byteRangeContains(kotlin.ranges.ClosedRange,long)
     public static final boolean byteRangeContains(kotlin.ranges.ClosedRange,short)
+    public static final boolean byteRangeContains(kotlin.ranges.OpenEndRange,int)
+    public static final boolean byteRangeContains(kotlin.ranges.OpenEndRange,long)
+    public static final boolean byteRangeContains(kotlin.ranges.OpenEndRange,short)
     public static final byte coerceAtLeast(byte,byte)
     public static final double coerceAtLeast(double,double)
     public static final float coerceAtLeast(float,float)
@@ -5854,13 +5892,20 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final java.lang.Comparable coerceIn(java.lang.Comparable,kotlin.ranges.ClosedRange)
     public static final short coerceIn(short,short,short)
     private static final boolean contains(kotlin.ranges.CharRange,java.lang.Character)
+    private static final boolean contains(kotlin.ranges.IntRange,byte)
+    private static final boolean contains(kotlin.ranges.IntRange,long)
     private static final boolean contains(kotlin.ranges.IntRange,java.lang.Integer)
+    private static final boolean contains(kotlin.ranges.IntRange,short)
+    private static final boolean contains(kotlin.ranges.LongRange,byte)
+    private static final boolean contains(kotlin.ranges.LongRange,int)
     private static final boolean contains(kotlin.ranges.LongRange,java.lang.Long)
+    private static final boolean contains(kotlin.ranges.LongRange,short)
     public static final synthetic boolean doubleRangeContains(kotlin.ranges.ClosedRange,byte)
     public static final boolean doubleRangeContains(kotlin.ranges.ClosedRange,float)
     public static final synthetic boolean doubleRangeContains(kotlin.ranges.ClosedRange,int)
     public static final synthetic boolean doubleRangeContains(kotlin.ranges.ClosedRange,long)
     public static final synthetic boolean doubleRangeContains(kotlin.ranges.ClosedRange,short)
+    public static final boolean doubleRangeContains(kotlin.ranges.OpenEndRange,float)
     public static final kotlin.ranges.CharProgression downTo(char,char)
     public static final kotlin.ranges.IntProgression downTo(byte,byte)
     public static final kotlin.ranges.IntProgression downTo(byte,int)
@@ -5893,6 +5938,9 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final synthetic boolean intRangeContains(kotlin.ranges.ClosedRange,float)
     public static final boolean intRangeContains(kotlin.ranges.ClosedRange,long)
     public static final boolean intRangeContains(kotlin.ranges.ClosedRange,short)
+    public static final boolean intRangeContains(kotlin.ranges.OpenEndRange,byte)
+    public static final boolean intRangeContains(kotlin.ranges.OpenEndRange,long)
+    public static final boolean intRangeContains(kotlin.ranges.OpenEndRange,short)
     public static final char last(kotlin.ranges.CharProgression)
     public static final int last(kotlin.ranges.IntProgression)
     public static final long last(kotlin.ranges.LongProgression)
@@ -5904,6 +5952,9 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final synthetic boolean longRangeContains(kotlin.ranges.ClosedRange,float)
     public static final boolean longRangeContains(kotlin.ranges.ClosedRange,int)
     public static final boolean longRangeContains(kotlin.ranges.ClosedRange,short)
+    public static final boolean longRangeContains(kotlin.ranges.OpenEndRange,byte)
+    public static final boolean longRangeContains(kotlin.ranges.OpenEndRange,int)
+    public static final boolean longRangeContains(kotlin.ranges.OpenEndRange,short)
     private static final char random(kotlin.ranges.CharRange)
     public static final char random(kotlin.ranges.CharRange,kotlin.random.Random)
     private static final int random(kotlin.ranges.IntRange)
@@ -5916,6 +5967,23 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final java.lang.Integer randomOrNull(kotlin.ranges.IntRange,kotlin.random.Random)
     private static final java.lang.Long randomOrNull(kotlin.ranges.LongRange)
     public static final java.lang.Long randomOrNull(kotlin.ranges.LongRange,kotlin.random.Random)
+    private static final kotlin.ranges.CharRange rangeUntil(char,char)
+    private static final kotlin.ranges.IntRange rangeUntil(byte,byte)
+    private static final kotlin.ranges.IntRange rangeUntil(byte,int)
+    private static final kotlin.ranges.IntRange rangeUntil(byte,short)
+    private static final kotlin.ranges.IntRange rangeUntil(int,byte)
+    private static final kotlin.ranges.IntRange rangeUntil(int,int)
+    private static final kotlin.ranges.IntRange rangeUntil(int,short)
+    private static final kotlin.ranges.IntRange rangeUntil(short,byte)
+    private static final kotlin.ranges.IntRange rangeUntil(short,int)
+    private static final kotlin.ranges.IntRange rangeUntil(short,short)
+    private static final kotlin.ranges.LongRange rangeUntil(byte,long)
+    private static final kotlin.ranges.LongRange rangeUntil(int,long)
+    private static final kotlin.ranges.LongRange rangeUntil(long,byte)
+    private static final kotlin.ranges.LongRange rangeUntil(long,int)
+    private static final kotlin.ranges.LongRange rangeUntil(long,long)
+    private static final kotlin.ranges.LongRange rangeUntil(long,short)
+    private static final kotlin.ranges.LongRange rangeUntil(short,long)
     public static final kotlin.ranges.CharProgression reversed(kotlin.ranges.CharProgression)
     public static final kotlin.ranges.IntProgression reversed(kotlin.ranges.IntProgression)
     public static final kotlin.ranges.LongProgression reversed(kotlin.ranges.LongProgression)
@@ -5924,6 +5992,9 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final synthetic boolean shortRangeContains(kotlin.ranges.ClosedRange,float)
     public static final boolean shortRangeContains(kotlin.ranges.ClosedRange,int)
     public static final boolean shortRangeContains(kotlin.ranges.ClosedRange,long)
+    public static final boolean shortRangeContains(kotlin.ranges.OpenEndRange,byte)
+    public static final boolean shortRangeContains(kotlin.ranges.OpenEndRange,int)
+    public static final boolean shortRangeContains(kotlin.ranges.OpenEndRange,long)
     public static final kotlin.ranges.CharProgression step(kotlin.ranges.CharProgression,int)
     public static final kotlin.ranges.IntProgression step(kotlin.ranges.IntProgression,int)
     public static final kotlin.ranges.LongProgression step(kotlin.ranges.LongProgression,long)
@@ -8574,7 +8645,6 @@ org.jetbrains.annotations.NotNull
 org.jetbrains.annotations.Nullable
 org.jetbrains.annotations.PropertyKey
 org.jetbrains.annotations.TestOnly
-androidx.activity.ComponentActivity$2$$InternalSyntheticApiModelOutline$1$1d86b29ca7cfe57ae559109843662f3c7cc3b33f8c97d2e2d499a492455633f1$0
 androidx.activity.ComponentActivity$2:
     final synthetic androidx.activity.ComponentActivity this$0
 androidx.activity.ComponentActivity$3:
@@ -8588,7 +8658,6 @@ androidx.activity.OnBackPressedDispatcher:
     androidx.activity.Cancellable addCancellableCallback(androidx.activity.OnBackPressedCallback)
     public void onBackPressed()
 androidx.core.app.ComponentActivity
-androidx.fragment.app.Fragment$2$$InternalSyntheticApiModelOutline$1$059e5af1c7a1af1f85e1b8265b6459b4c835cf0ff78539da7d7e89085377970f$0
 androidx.fragment.app.Fragment$2:
     final synthetic androidx.fragment.app.Fragment this$0
 androidx.fragment.app.Fragment
@@ -8620,16 +8689,24 @@ io.flutter.Log:
     public static int VERBOSE
     public static int WARN
     private static int logLevel
+io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineBroadcastReceiverPluginBinding
+io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineContentProviderPluginBinding
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineServicePluginBinding
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry:
+    private io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineBroadcastReceiverPluginBinding broadcastReceiverPluginBinding
+    private io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineContentProviderPluginBinding contentProviderPluginBinding
     private io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineServicePluginBinding servicePluginBinding
 io.flutter.embedding.engine.loader.ResourceExtractor:
     void waitForCompletion()
-io.flutter.plugin.common.BinaryMessenger$-CC
+io.flutter.plugin.common.BinaryMessenger$-CC:
+    public static io.flutter.plugin.common.BinaryMessenger$TaskQueue $default$makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger,io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
+    public static void $default$setMessageHandler(io.flutter.plugin.common.BinaryMessenger,java.lang.String,io.flutter.plugin.common.BinaryMessenger$BinaryMessageHandler,io.flutter.plugin.common.BinaryMessenger$TaskQueue)
 io.flutter.plugin.platform.PlatformView$-CC
 io.flutter.plugin.platform.VirtualDisplayController:
     private static java.lang.String TAG
 io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
+io.flutter.view.VsyncWaiter:
+    public static io.flutter.view.VsyncWaiter getInstance(float,io.flutter.embedding.engine.FlutterJNI)
 kotlin.collections.ArraysKt:
     public static synthetic bridge java.util.List sortedWith(java.lang.Object[],java.util.Comparator)
 kotlin.collections.ArraysKt___ArraysJvmKt:

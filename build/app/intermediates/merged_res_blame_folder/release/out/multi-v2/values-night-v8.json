@@ -4,7 +4,7 @@
             "outputFile": "com.knila.mvvmflutter.flutter_mvvm_code.app-mergeReleaseResources-9:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/arul/StudioProjects/Arul_flutter_backup/flutter_mvvm_code/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/arul/StudioProjects/flutter_mvvm_git/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

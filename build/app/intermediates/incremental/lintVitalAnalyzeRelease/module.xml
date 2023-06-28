@@ -1,11 +1,11 @@
 <lint-module
     format="1"
-    dir="/Users/arul/StudioProjects/Arul_flutter_backup/flutter_mvvm_code/android/app"
+    dir="/Users/arul/StudioProjects/flutter_mvvm_git/android/app"
     name=":app"
     type="APP"
     maven="android:app:"
     gradle="7.3.0"
-    buildFolder="/Users/arul/StudioProjects/Arul_flutter_backup/flutter_mvvm_code/build/app"
+    buildFolder="/Users/arul/StudioProjects/flutter_mvvm_git/build/app"
     bootClassPath="/Users/arul/Library/Android/sdk/platforms/android-33/android.jar:/Users/arul/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
     javaSourceLevel="1.8"
     compileTarget="android-33">
